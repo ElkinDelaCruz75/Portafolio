@@ -1,0 +1,151 @@
+---
+// Asegúrate de que esta ruta sea correcta para tu configuración de Tailwind CSS
+import "../styles/global.css"; 
+---
+<nav class="flex justify-center w-full bg-[#161414] p-4">
+    <ul class="flex space-x-8 list-none p-0 m-0 text-lg"> 
+        <li><a href="/" class="text-white">Inicio</a></li>
+        <li><a href="/contactos" class="text-white">Contactos</a></li>
+        <li><a href="/acerca" class="text-white">Acerca</a></li>
+    </ul>
+</nav>
+<body class="min-h-screen flex flex-col items-center justify-start p-10">
+    <style>
+        /* ================================================= */
+        /* === ESTILOS GLOBALES: FONDO Y LETRA HEREDADOS === */
+        /* ================================================= */
+        body {
+            /* Fondo negro con gradiente difuminado a rojo oscuro */
+            background: linear-gradient(180deg, #000000 0%, #4d0000 50%, #000000 100%) !important;
+            /* Se mantiene el texto en blanco */
+            color: #FFFFFF !important; 
+        }
+        h1 {
+            /* Color para el h1 de esta página */
+            color: #FF4500; /* Rojo anaranjado llamativo para el título */
+            font-size: 3rem; 
+            font-weight: bold;
+            margin-top: 2rem;
+            text-shadow: 0 0 30px rgba(255, 69, 0, 0.6), 0 0 60px rgba(255, 69, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 69, 0, 0.6), 0 0 40px rgba(255, 69, 0, 0.3);
+            }
+            to {
+                text-shadow: 0 0 40px rgba(255, 69, 0, 0.8), 0 0 80px rgba(255, 69, 0, 0.5);
+            }
+        }
+        
+        /* Estilo para el contenedor del formulario o la información */
+        .contact-container {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 3rem;
+            padding: 40px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(40, 10, 10, 0.9));
+            box-shadow: 0 10px 40px rgba(255, 69, 0, 0.3), 0 0 80px rgba(255, 69, 0, 0.1);
+            text-align: center;
+            border: 1px solid rgba(255, 69, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(255, 69, 0, 0.4), 0 0 100px rgba(255, 69, 0, 0.15);
+        }
+        
+        .contact-container h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #FF6347;
+            text-shadow: 0 0 20px rgba(255, 99, 71, 0.5);
+        }
+        
+        .contact-info p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 69, 0, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #FF4500;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info p:hover {
+            background: rgba(255, 69, 0, 0.1);
+            transform: translateX(5px);
+            border-left-width: 6px;
+        }
+        
+        .contact-info a {
+            color: #FF4500;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background-color: #FF6347;
+            transition: width 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #FF6347;
+        }
+        
+        .contact-info a:hover::after {
+            width: 100%;
+        }
+    </style>
+
+    <h1 class="text-center">Cont&aacute;ctame</h1>
+
+    <div class="contact-container">
+        
+        <h2>Informaci&oacute;n de Contacto</h2>
+        
+        <div class="contact-info">
+            <p>
+                Correo Electr&oacute;nico: 
+                <a href="mailto:tu-correo@ejemplo.com">elkindelacruzcudris@gmail.com</a>
+            </p>
+            <p> Tel&oacute;fono: <a href="tel:+573001234567">(+57) 300 327 9408</a> </p>
+            
+            <a href="https://wa.me/573003279408" target="_blank" style="text-decoration: none;">
+                <button style="background-color: #d33f25; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                    Contactar por WhatsApp
+                </button>
+            </a>
+
+            </a>
+
+            
+            <p>
+                P&aacute;gina web: 
+                <a href="https://elkin-de-la-cruz.vercel.app/" target="_blank">elkin-de-la-cruz.vercel.app</a>
+            </p>
+            
+            <p style="font-size: 1.2rem;">
+                Ubicaci&oacute;n: Barbosa, Antioquia, Colombia
+            </p>
+            </div>
+        
+    </div>
+    <div class="flex-grow"></div> 
+    
+ <footer class="w-full bg-black py-4 text-white text-left text-lg mt- px-32">
+    <p>&copy;Elkin de la cruz cudris</p>
+</footer>
+</body>
