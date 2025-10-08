@@ -1,101 +1,100 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css"; // ¡Verifica que esta ruta sea correcta!
 ---
 
-<nav class="flex justify-center w-full bg-[#161414] p-4">
-    <ul class="flex space-x-8 list-none p-0 m-0 text-lg"> 
-        <li><a href="/" class="text-white">Inicio</a></li>
-        <li><a href="/contactos" class="text-white">Contactos</a></li>
-        <li><a href="/acerca" class="text-white">Acerca</a></li>
-    </ul>
-</nav>
-
-<body class="min-h-screen flex flex-col items-center justify-start p-10">
-
+<Layout title="Acerca de Elkin">
+  <body class="min-h-screen flex flex-col items-center justify-start p-10">
     <style>
-        /* ================================================= */
-        /* === ESTILOS PARA EL FONDO NEGRO Y LETRA BLANCA === */
-        /* ================================================= */
-        body {
-            /* Fondo negro con gradiente difuminado a rojo oscuro */
-            background: linear-gradient(180deg, #000000 0%, #4d0000 50%, #000000 100%) !important;
-            /* Se mantiene el texto en blanco */
-            color: #FFFFFF !important; 
-            /* Se puede definir un tipo de letra base aquí si es necesario, e.g.: font-family: 'Arial', sans-serif; */
-        }
+      /* ================================================= */
+      /* === ESTILOS PARA EL FONDO NEGRO Y LETRA BLANCA === */
+      /* ================================================= */
+      body {
+        /* Fondo negro con gradiente difuminado a rojo oscuro */
+        background: linear-gradient(
+          180deg,
+          #000000 0%,
+          #4d0000 50%,
+          #000000 100%
+        ) !important;
+        /* Se mantiene el texto en blanco */
+        color: #ffffff !important;
+        /* Se puede definir un tipo de letra base aquí si es necesario, e.g.: font-family: 'Arial', sans-serif; */
+      }
 
-        /* Estilo para el h1 */
-        h1 {
-            color: #ad0f0fbb; 
-            font-size: 3rem; 
-            font-weight: bold;
-            margin-top: 2rem; 
-        }
-        
-        /* Estilos para centrar y distribuir las tres columnas */
-        .three-columns {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;
-            margin: 0 auto; 
-        }
+      /* Estilo para el h1 */
+      h1 {
+        color: #ad0f0fbb;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 2rem;
+      }
+
+      /* Estilos para centrar y distribuir las tres columnas */
+      .three-columns {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+      }
     </style>
-    
+
     <h1 class="text-center">Acerca de mi</h1>
-    
+
     <div class="flex flex-col items-center w-full">
-        <p class="text-center mt-4 mx-8 text-lg" style="font-size: 30px">
-            Hola aca encuentras informacion sobre mi mis experiencia laborales y
-            estudios realizados
-        </p>
-        
-        <img
-            src="/edc.png"
-            alt="Imagen de ejemplo"
-            class="mx-auto w-1/4 h-auto"
-            style="margin-top: 2rem;"
-        />
-        
-        <p class="text-center mt-8 mx-80" style="font-size: 25px; color: #FFFFFF;">
-            hola mi nombre es Elkin de la cruz cudris, nacido en 1983 en la ciudad de
-            valledupar cesar, soy tecnico en sistemas, he trabajado en empresas como
-            claro como tecnico de redes y soporte (DTH), con una experiencia de 4
-            a&ntilde;os, y me he desempe&ntilde;ado por tener un buen conocimientos en
-            el area de redes y soporte tecnico, actualmente estoy laborando en la
-            empresa SP Ingenieros como tecnico en sistemas.
-        </p>
+      <p
+        class="text-center mt-8 mx-80"
+        style="font-size: 25px; color: #FFFFFF;"
+      >
+        Hola aca encuentras informaci&oacute;n sobre mi mis experiencias
+        laborales y estudios realizados.
+      </p>
+
+      <img
+        src="/edc.png"
+        alt="Imagen de ejemplo"
+        class="mx-auto w-1/4 h-auto"
+        style="margin-top: 2rem;"
+      />
+
+      <p
+        class="text-center mt-8 mx-80"
+        style="font-size: 25px; color: #FFFFFF;"
+      >
+        hola mi nombre es Elkin de la cruz cudris, nacido en 1983 en la ciudad
+        de valledupar cesar, soy tecnico en sistemas, he trabajado en empresas
+        como claro como tecnico de redes y soporte (DTH), con una experiencia de
+        4 a&ntilde;os, y me he desempe&ntilde;ado por tener un buen
+        conocimientos en el area de redes y soporte tecnico, actualmente estoy
+        laborando en la empresa SP Ingenieros como tecnico en sistemas.
+      </p>
     </div>
 
     <div class="three-columns" style="margin-top: 3rem;">
-        
-        <p
-            style="font-size: 30px; color: hsl(338, 3%, 54%);"
-            class="text-center mt-30 mx-15"
-        >
-            Educacion
-        </p>
-        
-        <p
-            style="font-size: 25px; color: hsl(338, 3%, 54%);"
-            class="text-center mt-30 mx-15"
-        >
-            Bachiller academico<br>
-            Instituto Tecnico Upar<br>
-            (1995 - 2001)
-        </p>
+      <p
+        style="font-size: 30px; color: hsl(338, 3%, 54%);"
+        class="text-center mt-30 mx-15"
+      >
+        Educacion
+      </p>
 
-        <p
-            style="font-size: 25px; color: hsl(338, 3%, 54%);"
-            class="text-center mt-30 mx-15"
-        >
-            Tecnico en sistemas<br>
-            Sistemas interactivos<br>
-            (2008 - 2010)
-        </p>
+      <p
+        style="font-size: 25px; color: hsl(338, 3%, 54%);"
+        class="text-center mt-30 mx-15"
+      >
+        Bachiller academico<br />
+        Instituto Tecnico Upar<br />
+        (1995 - 2001)
+      </p>
+
+      <p
+        style="font-size: 25px; color: hsl(338, 3%, 54%);"
+        class="text-center mt-30 mx-15"
+      >
+        Tecnico en sistemas<br />
+        Sistemas interactivos<br />
+        (2008 - 2010)
+      </p>
     </div>
-    
-    <footer class="w-full bg-black py-4 text-white text-center text-lg mt-10">
-        <p>©Elkin de la cruz cudris</p>
-    </footer>
-
-</body>
+  </body>
+</Layout>

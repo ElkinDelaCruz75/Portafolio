@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Footer from "./Footer.astro";
+import Navbar from "./Navbar.astro";
 
 const { title } = Astro.props;
 ---
@@ -14,7 +16,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -88,5 +92,41 @@ const { title } = Astro.props;
     text-align: right; /* Alinea el texto dentro de su contenedor a la derecha */
     margin-left: auto; /* Empuja el bloque de texto a la derecha */
     margin-right: 0; /* Asegura que no haya margen derecho */
+  }
+
+  /* Estilos para el footer con redes sociales */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .social-links a:hover {
+    background-color: rgba(255, 69, 0, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
   }
 </style>
