@@ -1,35 +1,121 @@
-<nav class="flex content-start w-full bg-[#161414] p-4">
-  <ul class="flex space-x-4 list-none p-0 m-0 gap-5">
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/contactos">Contactos</a></li>
-    <li><a href="#lenguajes-programacion">Acerca</a></li>
-  </ul>
+---
+/* Asegúrate de tener tu importación de estilos global aquí si es necesario */
+---
+
+<style>
+    /* ================================================= */
+    /* === ESTILOS PARA EL FONDO DIFUMINADO Y TEXTO === */
+    /* ================================================= */
+    body {
+        /* Gradiente: Negro (#000) -> Rojo Oscuro (#4d0000) -> Negro */
+        background: linear-gradient(180deg, #000000 0%, #4d0000 50%, #000000 100%) !important;
+        /* Asegura que el texto general sea blanco */
+        color: #FFFFFF !important; 
+        min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+        margin: 0; /* Eliminar el margen predeterminado del body */
+        padding: 0; /* Eliminar el padding predeterminado del body */
+    }
+
+    /* Estilos del NAV: Aseguramos que los links sean blancos */
+    nav a {
+        color: #FFFFFF !important;
+        text-decoration: none; /* Quita el subrayado de los enlaces */
+    }
+    nav ul {
+        display: flex; /* Asegura que la lista use flexbox para sus elementos */
+        gap: 20px; /* Espacio entre los elementos de la lista */
+    }
+
+
+    /* Estilos para las secciones principales (Header Content) */
+    .header-content {
+        display: flex;
+        align-items: center;
+        width: 80%; /* Ancho de la sección */
+        margin: 40px auto; /* Espacio y centrado */
+        padding: 20px;
+        background-color: rgba(10, 10, 10, 0.7); /* Contenedor semi-transparente para resaltar texto */
+        border-radius: 8px;
+        gap: 30px; /* Espacio entre texto e imagen/otro texto */
+    }
+
+    /* Ajuste para el contenido de texto dentro de .header-content */
+    .header-content .text-content {
+        flex: 1; /* Permite que el texto ocupe el espacio disponible */
+        /* Eliminamos el padding-right fijo aquí y lo manejamos con gap en .header-content */
+    }
+    /* Estilo para el text-content cuando no hay imagen a su lado */
+    .header-content:not(.right-aligned-section) .text-content:last-child {
+        padding-right: 0; /* Asegura que el último text-content no tenga padding extra si no hay imagen */
+    }
+
+
+    /* Si la sección debe estar alineada a la derecha, invierte el orden */
+    .right-aligned-section {
+        flex-direction: row-reverse; /* Invierte el orden (imagen a la izquierda, texto a la derecha) */
+    }
+    /* Ajuste para el text-content en secciones right-aligned cuando hay imagen */
+    .right-aligned-section .text-content {
+        padding-left: 0; /* Asegura que el texto no tenga padding extra cuando está a la derecha */
+    }
+
+
+    .profile-image {
+        width: 250px;
+        height: auto;
+        border-radius: 8px;
+        flex-shrink: 0; /* Evita que la imagen se encoja */
+    }
+    
+    .header-content h2 {
+        color: #FF4500; /* Color de título llamativo (Rojo Anaranjado) */
+        font-size: 2.5rem;
+        margin-bottom: 15px; /* Espacio debajo del título */
+    }
+    
+    .header-content p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+</style>
+
+<nav class="flex justify-center w-full bg-[#161414] p-4">
+    <ul class="flex space-x-4 list-none p-0 m-0">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/contactos">Contactos</a></li>
+        <li><a href="/acerca">Acerca</a></li>
+    </ul>
 </nav>
 
 <div class="header-content">
-  <div class="text-content">
-    <h2>Elkin De la Cruz Cudris</h2>
-    <p>
-      Hola mi nombres es Elkin De la Cruz Cudris soy técnico es sistemas, y
-      desarrollador web estoy empezando en el mundo de desarrollador de pagina
-      con muchas ganas de emprender y poder cumplir mis sueños. He trabajado en
-      empresas como claro como tecnico de redes y soporte (DTH), con una
-      experiencia de 4 años, y me he desempeñado por tener un buen conocimientos
-    </p>
-  </div>
-  <img src="/imagen.png" alt="imagen.png" class="profile-image" />
+    <div class="text-content">
+        <h2>Elkin De la Cruz Cudris</h2>
+        <p>
+            Hola mi nombres es Elkin De la Cruz Cudris, soy técnico en sistemas y
+            desarrollador web, estoy empezando en el mundo del desarrollo de páginas
+            con muchas ganas de emprender y poder cumplir mis sueños. He trabajado en
+            empresas como **Claro** como técnico de redes y soporte (DTH), con una
+            experiencia de 4 años, y me he desempeñado por tener un buen conocimiento.
+        </p>
+    </div>
+    <img src="/imagen.png" alt="Elkin de la Cruz" class="profile-image" />
 </div>
 
 <div class="header-content right-aligned-section" id="lenguajes-programacion">
-  <div class="text-content">
-    <h2>Lenguajes de programacion</h2>
-    <p>
-      En el poco timpo que llevo aprendiendo lenguajes de programacion me he
-      destacado por aprender y utilizar los lenguage tales HTML, CSS,
-      JavaScript, Java. Me gusta mucho aprender y poner en practica mis
-      conocimientos en proyectos reales. Por tal motivo estoy en busca de una
-      oportunidad laboral donde pueda demostrar mis habilidades y seguir
-      creciendo profesionalmente.
-    </p>
-  </div>
+    <div class="text-content">
+        <h2>Lenguajes de programación</h2>
+        <p>
+            En el poco tiempo que llevo aprendiendo lenguajes de programación me he
+            destacado por utilizar HTML, CSS, JavaScript, y Java. Me gusta mucho
+            aprender y poner en práctica mis conocimientos en proyectos reales. Por tal
+            motivo, estoy en busca de una oportunidad laboral donde pueda demostrar mis
+            habilidades y seguir creciendo profesionalmente.
+        </p>
+    </div>
 </div>
+
+<footer class="w-full bg-black py-4 text-white text-center text-xs">
+    <p>
+        © Elkin de la cruz cudris
+    </p>
+</footer>
